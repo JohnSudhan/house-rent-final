@@ -1,12 +1,10 @@
--- rent_by_bhk_top_cities.sql
 WITH top_cities AS (
     SELECT City
     FROM cleaned_house_rent
     GROUP BY City
     ORDER BY COUNT(*) DESC
-    LIMIT 6
+    LIMIT 5
 )
-
 SELECT
     c.City,
     c.BHK,
